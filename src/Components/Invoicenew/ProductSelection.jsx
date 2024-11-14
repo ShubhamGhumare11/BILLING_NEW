@@ -291,14 +291,12 @@ const handleCgstChange = (e) => {
         <HStack
       direction={{ base: "column", md: "row" }}
       spacing={{ base: 4, md: 6 }}
-      align="flex-start"
       width="100%"
       wrap="wrap"
-      justify="flex-start"
     >
       {/* SGST Field */}
       <FormControl width={{ base: "100%", md: "auto" }} mb={{ base: 4, md: 0 }}>
-        <FormLabel fontSize={{ base: "sm", md: "md" }}>SGST</FormLabel>
+        <FormLabel fontSize={{ base: "sm", md: "sm" }}>SGST</FormLabel>
         <NumberInput
           value={sgst}
           onChange={(valueString) => handleSgstChange({ target: { value: valueString } })}
@@ -317,7 +315,7 @@ const handleCgstChange = (e) => {
 
       {/* CGST Field */}
       <FormControl width={{ base: "100%", md: "auto" }} mb={{ base: 4, md: 0 }}>
-        <FormLabel fontSize={{ base: "sm", md: "md" }}>CGST</FormLabel>
+        <FormLabel fontSize={{ base: "sm", md: "sm" }}>CGST</FormLabel>
         <NumberInput
           value={cgst}
           onChange={(valueString) => handleCgstChange({ target: { value: valueString } })}
@@ -336,7 +334,7 @@ const handleCgstChange = (e) => {
 
       {/* Payment Method Select */}
       <FormControl width={{ base: "100%", md: "auto" }} mb={{ base: 4, md: 0 }}>
-        <FormLabel fontSize={{ base: "sm", md: "md" }}>Payment Method</FormLabel>
+        <FormLabel fontSize={{ base: "sm", md: "sm" }}>Payment Method</FormLabel>
         <Select
           placeholder="Select Payment Method"
           onChange={handlePaymentMethodSelect}
@@ -351,7 +349,7 @@ const handleCgstChange = (e) => {
 
 
         {/* Display selected products in a table */}
-        <Table variant="simple" mt={4}>
+        <Table variant="simple" mt={4} size="sm">
           {selectedProducts.length > 0 && (
             <Thead>
               <Tr>
@@ -389,7 +387,7 @@ const handleCgstChange = (e) => {
                         parseInt(e.target.value) || 0
                       )
                     }
-                    w="100px"
+                    w="80px"
                   />
                 </Td>
 
@@ -430,7 +428,7 @@ const handleCgstChange = (e) => {
                         parseInt(valueString) || 1
                       )
                     }
-                    w="100px"
+                    w="80px"
                   >
                     <NumberInputField />
                     <NumberInputStepper>
@@ -455,7 +453,7 @@ const handleCgstChange = (e) => {
                         parseInt(valueString) || 1
                       )
                     }
-                    w="100px"
+                    w="80px"
                     isInvalid={product.quantity > product.stockQuantities}
                   >
                     <NumberInputField />
