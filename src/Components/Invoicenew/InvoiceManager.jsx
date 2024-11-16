@@ -335,6 +335,7 @@ const productParams = selectedProducts
       >
         Billing
       </Heading>
+      
       <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={6}>
       <VStack spacing={6} align="stretch">
 
@@ -342,17 +343,6 @@ const productParams = selectedProducts
       <CreateCustomer onCustomerData={handleCustomerData} />
       {/* <CustomerList onSelect={handleCustomerSelect} /> */}
       </Box>
-      <Box p={4} borderWidth="1px" borderRadius="md" boxShadow="sm">
-      <ProductSelection
-        onProductSelect={handleProductSelect}
-        onGstToggle={handleGstToggle}
-        onPaymentMethodChange={handlePaymentMethodChange}
-        onTaxChange={handleTaxChange} 
-      />
-   </Box>
-   </VStack>
-
-   <Box p={4} borderWidth="1px" borderRadius="md" boxShadow="sm">
       <InvoiceSummary
         customer={customerData}
         products={selectedProducts}
@@ -361,8 +351,20 @@ const productParams = selectedProducts
         cgst={cgst}
       />
    <Divider my={4} />
+   </VStack>
 
-
+   <Box p={4} borderWidth="1px" borderRadius="md" boxShadow="sm">
+    
+   <Flex direction="column" align="stretch" justify="flex-start">
+   <Box p={4} borderWidth="10px" borderRadius="md" boxShadow="sm" maxWidth="1200px">
+      <ProductSelection
+        onProductSelect={handleProductSelect}
+        onGstToggle={handleGstToggle}
+        onPaymentMethodChange={handlePaymentMethodChange}
+        onTaxChange={handleTaxChange} 
+      />
+   </Box>
+   </Flex>
 
       {/* <Text fontWeight="bold">Total Amount: ${totalAmount}</Text> */}
       {/* <Button onClick={handleGenerateInvoice} mt={4} colorScheme="teal" alignItems={Center}>Save Details</Button> */}

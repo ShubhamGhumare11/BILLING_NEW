@@ -102,7 +102,7 @@ const CreateCustomer = ({ onCustomerData }) => {
   const isFormValid = isFullNameValid && isEmailValid && isPhoneValid;
 
   return (
-    <Box as="form" onSubmit={handleSubmit} p="1rem" maxW="40rem" mx="auto">
+    <Box as="form" onSubmit={handleSubmit}  maxW="25rem" mx="auto">
       <Grid templateColumns="repeat(2, 1fr)" gap={4}>
         <GridItem colSpan={{ base: 2, md: 1 }}>
           <FormControl isRequired>

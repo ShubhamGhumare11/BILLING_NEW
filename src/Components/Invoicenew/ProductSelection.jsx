@@ -267,7 +267,7 @@ const handleCgstChange = (e) => {
 
   // const finalPrice = (product.sellingPrice - (product.sellingPrice * product.discount) / 100);
   return (
-    <Box p={4} border="1px solid gray" borderRadius="md" boxShadow="sm" maxW="90%">
+    <Box p={4} border="1px solid gray" borderRadius="md" boxShadow="sm"  maxWidth="1200px"  >
       <VStack spacing={3} align="stretch">
         <Flex
           wrap="wrap"
@@ -282,11 +282,6 @@ const handleCgstChange = (e) => {
         </Flex>
 
  
-
-
-
-
-
 
         <HStack
       direction={{ base: "column", md: "row" }}
@@ -349,7 +344,7 @@ const handleCgstChange = (e) => {
 
 
         {/* Display selected products in a table */}
-        <Table variant="simple" mt={4} size="sm">
+        <Table variant="simple" mt={4} size="sm" width="100%">
           {selectedProducts.length > 0 && (
             <Thead>
               <Tr>

@@ -288,7 +288,7 @@ const InvoiceSummary = ({ customer, products, total, sgst, cgst }) => {
     console.log("SGST in InvoiceSummary........"+cgst)
 
     return (
-        <Box p={4} border="1px solid gray" borderRadius="md">
+        <Box p={4} border="1px solid gray" borderRadius="md" maxW="25rem" mx="auto">
             {/* Invoice Summary Section */}
             <Text mt={4} fontWeight="bold">Total Amount: ${total.toFixed(2)}</Text>
 
